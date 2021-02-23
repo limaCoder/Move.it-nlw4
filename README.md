@@ -52,7 +52,7 @@
 
 </br>
 
-<h2> 🎲 Rodando o Projeto</h2>
+<h1> 🎲 Rodando o Projeto</h1>
 
 # Clone este repositório
 ```bash
