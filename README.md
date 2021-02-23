@@ -47,12 +47,12 @@
 <h2>🖼️ Imagens do Projeto</h2>
 
 <div align="center" >
-  <img src="moveit-screenshot.png" width="80000px"/>
+  <img src="moveit-screenshot.jpg" width="80000px"/>
 </div>
 
 </br>
 
-<h3> 🎲 Rodando o Projeto</h3>
+<h2> 🎲 Rodando o Projeto</h2>
 
 # Clone este repositório
 ```bash
