@@ -16,3 +16,18 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+@media screen and (max-width:800px) {
+  .container section {
+    grid-template-columns: 1fr;
+  }
+  .challengeBoxContainer {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .challengeBoxContainer {
+    margin-top: 4rem;
+  }
+}
