@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 import challenges from '../../challenges.json';
 
 interface Challenge {
@@ -16,6 +16,7 @@ interface ChallengesContextData {
   levelUp: () => void;
   startNewChallenge: () => void;
   resetChallenge: () => void;
+  completeChallenge: () => void;
 }
 
 interface ChallengeProviderProps {
@@ -33,6 +34,10 @@ export function ChallengeProvider({children}: ChallengeProviderProps) {
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
+  useEffect(() => {
+    Notification.requestPermission();
+  }, []) // quando o array estiver vazio, a função no primeiro parâmetro será disparada uma única vez quando esse componente for exibido em tela
+
   function levelUp() {
     setLevel(level + 1);
   }
@@ -42,10 +47,37 @@ export function ChallengeProvider({children}: ChallengeProviderProps) {
     const challenge = challenges[randomChallengeIndex];
 
     setActiveChallenge(challenge)
+
+    new Audio('/notification.mp3').play();
+
+    if(Notification.permission === 'granted') {
+      new Notification('novo desafio 🎉', {
+        body: `Valendo ${challenge.amount}xp`
+      })
+    }
   }
 
   function resetChallenge() {
     setActiveChallenge(null);
+  }
+
+  function completeChallenge() {
+    if(!activeChallenge) {
+      return; // uma validação na qual o usuário não pode chamar a função se o desafio não estiver ativo
+    }
+
+    const { amount } = activeChallenge; // buscar do meu activeChallenge o quanto de experiência ele dá
+
+    let finalExperience = currentExperience + amount; // o tanto de experiência que o desafio vai dar
+
+    if(finalExperience > experienceToNextLevel) { // se a experiência obtida for maior que a experiência que precisa para passar de nível, subtrai o valor restante e upa de level
+      finalExperience = finalExperience - experienceToNextLevel;
+      levelUp();
+    }
+
+    setCurrentExperience(finalExperience);
+    setActiveChallenge(null); // ao completar o desafio ele é zerado
+    setChallengesCompleted(challengesCompleted + 1); // aumenta o número de desafios completados
   }
   
   return(
@@ -58,7 +90,8 @@ export function ChallengeProvider({children}: ChallengeProviderProps) {
       activeChallenge,
       levelUp,
       startNewChallenge,
-      resetChallenge
+      resetChallenge,
+      completeChallenge
       }}
       >
         {children}
