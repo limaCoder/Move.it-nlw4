@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center" >
+  <img src="public/logo-full.svg" width="400px"/>
+</div>
 
-## Getting Started
+<!-- ************************************* Baadges ********************************************* -->
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/limaCoder/Move.it-nlw4?color=%2304D361">
 
-First, run the development server:
+ <img alt="Repository size" src="https://img.shields.io/github/repo-size/limaCoder/Move.it-nlw4">
 
+  <a href="https://github.com/limaCoder/Move.it-nlw4/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/limaCoder/Move.it-nlw4">
+  </a>
+</p>
+
+<!-- ************************************* Título ********************************************* -->
+
+<h1> :computer: Next Level Week#4 - Move.it</h1>
+
+<!-- ************************************* Sobre o projeto ********************************************* -->
+
+<h2>:revolving_hearts: Sobre o Projeto</h2>
+
+<p> Projeto da Rocketseat desenvolvido na trilha de ReactJS durante o evento da Next Level Week, na 4ª edição. Durante o evento foi ensinado os principais conceitos de React como SPA, componentes, props e estado com os novos hooks que vieram para substituir as class components, e agora desbravando o poder do Framework Next.js, que traz conceitos de SSR E SSG para aplicações React.</p>
+
+---
+
+<h3>📚 Linguagens / Frameworks / Bibliotecas</h3>
+
+* HTML
+* CSS 
+* JavaScript
+* Typescript
+* Yarn
+* NPM
+* React 
+* CSS Modules
+* Next.js
+* [Google Fonts](https://fonts.google.com/) - Fontes para o projeto.
+
+
+<h3>🧰 Ferramentas</h3>
+
+* [Figma](https://www.figma.com/) - Ferramenta para design de Interfaces.
+* [Visual Studio Code](https://code.visualstudio.com/) - IDE de Desenvolvimento. 
+
+<h2>🖼️ Imagens do Projeto</h2>
+
+<div align="center" >
+  <img src="moveit-screenshot.jpg" width="80000px"/>
+</div>
+
+</br>
+
+<h1> 🎲 Rodando o Projeto</h1>
+
+# Clone este repositório
+```bash
+$ git clone https://github.com/limaCoder/wandavision.git
+```
+
+# Acesse a pasta do projeto
+```bash
+$ cd Move.it-nlw4
+```
+
+# Rode o servidor de desenvolvimento
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) em seu browser para visualizar a aplicação.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+O repositório está hospedado no servidor da Vercel [move-it-nlw4-limacoder.vercel.app](move-it-nlw4-limacoder.vercel.app)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+⌨️ com ❤️ por [Mario Lima](https://gist.github.com/limaCoder) 😊
